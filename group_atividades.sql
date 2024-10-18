@@ -18,7 +18,8 @@ SELECT * FROM `pedidos` WHERE `valor_total` > 300;
 SELECT * FROM `clientes` WHERE `nome` LIKE '%Silva%';
 
 -- 6. Exibir os pedidos feitos após '2024-07-01' ordenados pelo valor total de forma decrescente
-SELECT * FROM `pedidos` WHERE DATE(`pedidos`.`data_pedido`) > DATE('2024-07-01') ORDER BY `pedidos`.`valor_total` DESC;
+SELECT * FROM `pedidos` WHERE DATE(`pedidos`.`data_pedido`) > DATE('2024-07-01') 
+ORDER BY `pedidos`.`valor_total` DESC;
 
 -- 7. Exibir os clientes que fizeram pedidos acima de 250 reais, ordenados pelo nome
 SELECT `clientes`.`nome`, `pedidos`.`valor_total` FROM `pedidos` 
